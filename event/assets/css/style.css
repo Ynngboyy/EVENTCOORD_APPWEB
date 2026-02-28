@@ -1,0 +1,130 @@
+
+:root {
+    --primary-color: #00468b; /* Azul profesional */
+    --accent-color: #00a8e8;
+    --white: #ffffff;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Fondo de pantalla completa */
+.main-hero {
+    position: relative;
+    background: url('../img/fondo-empresa.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurecido para legibilidad */
+    z-index: 1;
+}
+
+.content-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+/* Estilo del Logo */
+.company-brand {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-logo {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+}
+
+/* Caja del Escáner (Blanca) */
+.scanner-box {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.instruction {
+    color: #666;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.qr-icon-wrapper {
+    background: #f8f9fa;
+    width: 110px; height: 110px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center; justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.qr-trigger:hover .qr-icon-wrapper {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.btn-label {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+#qr-canvas {
+    width: 100%;
+    border: 4px solid var(--primary-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Botones */
+.btn-corp-danger {
+    background: #d90429;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.divider {
+    margin: 25px 0;
+    border-top: 1px solid #ddd;
+}
+
+.btn-back {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #e2e2e2;
+    color: #000;
+}
