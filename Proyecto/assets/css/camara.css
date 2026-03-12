@@ -1,0 +1,123 @@
+body {
+    margin:0;
+    padding: 0;
+ position: relative;
+    min-height:100vh;
+
+
+    background: linear-gradient(270deg,#1F3554,#095b8a,#1F3554);
+    background-size:600% 600%;
+    animation:fondoAnimado 10s ease infinite;
+
+
+    color:white;
+    font-family:Arial, sans-serif;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+
+@keyframes fondoAnimado{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+video, canvas {
+    width: 300px;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+.botones {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;  
+    gap: 10px;                
+    flex-wrap: wrap;   
+     
+}
+
+button {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0px 10px 20px rgba(0,0,0,0.4);
+}
+
+button:active{
+
+
+    transform:scale(0.95);
+}
+
+
+.btnFoto{
+
+
+     background:#e3c676;
+    font-weight:bold;
+}
+
+
+.btn-dorado {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1f2f46;                 
+    background: linear-gradient(145deg, #E0C27A, #E0C27A); 
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    /* Sombra dorada */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+
+
+.logo{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.logo img{
+    width:130px;   
+    height:auto;
+    border-radius: 20%;
+}
+
+.titulo{
+
+color: white;
+font-size: 40px;
+margin-top: 10px;
+letter-spacing: 2px;
+}
+.camara-contenedor{
+    background:#1c3b5c;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+}
+
+#particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Envía el efecto al fondo */
+            background-color: #0b132b; /* Un azul muy oscuro para que resalten las partículas */
+        }

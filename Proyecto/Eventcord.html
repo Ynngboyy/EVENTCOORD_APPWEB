@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eventcord | Confirmación</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+            
+            <header class="header">
+                <img src="img/logos.jpeg" alt="Logo Eventcord" class="logo-circular">
+                <h1>EVENTCORD</h1>
+                <p class="slogan">"Creando momentos familiares inolvidables"</p>
+            </header>
+
+            <main class="form-container">
+                <h2>Confirmación de Asistencia</h2>
+                <form id="familyForm">
+                    <div class="form-group">
+                        <label for="familia">Nombre de la familia:</label>
+                        <input type="text" id="familia" name="familia" placeholder="Ej: Familia Pérez García" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asistencia">¿Asistirán al evento?</label>
+                        <select id="asistencia" name="asistencia" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="si">Sí, asistiremos</option>
+                            <option value="no">No, no podremos asistir</option>
+                        </select>
+                    </div>
+
+                    <div id="detallesAsistencia" style="display: none;">
+                        <div class="form-group">
+                            <label for="adultos">Número de adultos:</label>
+                            <input type="number" id="adultos" name="adultos" min="0" value="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="ninos">Número de niños:</label>
+                            <input type="number" id="ninos" name="ninos" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="motivoNoAsistencia" style="display: none;">
+                        <label for="motivo">¿Nos cuentas el motivo?</label>
+                        <textarea id="motivo" name="motivo" placeholder="Opcional..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">ENVIAR CONFIRMACIÓN</button>
+                </form>
+            </main>
+
+            <section class="scanner-section">
+                <p>¿Ya estás en el lugar del evento?</p>
+                <a href="indexQR.html" class="next-btn">ACTIVAR SCANNER →</a>
+                
+                <div class="back-home-container">
+                    <a href="index.html" class="btn-regresar-sutil">← VOLVER AL INICIO</a>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>© 2026 Eventcord</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/validar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

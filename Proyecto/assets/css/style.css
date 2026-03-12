@@ -1,0 +1,179 @@
+
+
+/* --- Variables de Color --- */
+:root {
+    --navy-blue: #012147;
+    --accent-blue: #00468b;
+    --gold-main: #E0C27A;    /* Dorado claro de tu botón original */
+    --danger-red: #dc3545;
+    --white: #ffffff;
+    --dark-text: #1f2f46;    /* Color oscuro para las letras sobre dorado */
+}
+
+/* --- Base y Fondo Animado --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.main-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Tu degradado animado original */
+    background: linear-gradient(270deg, #1F3554, #095b8a, #1F3554);
+    background-size: 600% 600%;
+    animation: fondoAnimado 10s ease infinite;
+    padding: 20px;
+}
+
+@keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(1, 33, 71, 0.4);
+    z-index: 1;
+}
+
+/* --- Contenedor y Logotipo (Tamaño Ajustado) --- */
+.content-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 450px; 
+    text-align: center;
+}
+
+.main-logo {
+    width: 100%;
+    /* AJUSTE AQUÍ: Bajamos de 220px a 140px para que se vea más pequeño y estético */
+    max-width: 140px; 
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin-bottom: 5px; /* Menos espacio abajo para que la tarjeta suba un poco */
+}
+
+/* --- Tarjeta del Escáner --- */
+.scanner-box {
+    background: var(--white);
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    color: var(--navy-blue);
+}
+
+.instruction {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* --- Botón QR (Círculo Azul) --- */
+.qr-icon-wrapper {
+    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--accent-blue) 100%);
+    width: 100px; 
+    height: 100px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(1, 33, 71, 0.3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.qr-icon-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.qr-icon-wrapper img {
+    width: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.btn-label {
+    display: block;
+    font-weight: 700;
+    color: var(--navy-blue);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* --- BOTONES CON ESTILO ORIGINAL (Dorado y Rojo) --- */
+
+/* Clase Base para efectos de botones */
+.btn-corp-danger, .btn-back {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Efectos de Movimiento (Hover y Click) */
+.btn-corp-danger:hover, .btn-back:hover {
+    transform: translateY(-3px);
+}
+
+.btn-corp-danger:active, .btn-back:active {
+    transform: scale(0.95);
+}
+
+/* --- BOTÓN REGRESAR (ESTILO DORADO BRILLANTE) --- */
+.btn-back {
+    background: linear-gradient(145deg, #E0C27A, #E0C27A); /* Gradiente original */
+    color: var(--dark-text) !important; /* Letras oscuras para contraste */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); /* El brillo dorado */
+}
+
+.btn-back:hover {
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3), 0 0 20px rgba(212, 175, 55, 0.8);
+    filter: brightness(1.1);
+}
+
+/* --- BOTÓN DETENER (ESTILO ROJO) --- */
+.btn-corp-danger {
+    background-color: var(--danger-red);
+    color: white;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}
+
+.btn-corp-danger:hover {
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.3);
+}
+
+/* --- Separador y Otros --- */
+.divider {
+    margin: 25px 0;
+    border-top: 2px solid #eee;
+    opacity: 1;
+}
+
+#qr-canvas {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    border: 4px solid var(--navy-blue);
+    margin: 15px auto;
+    display: block;
+}
