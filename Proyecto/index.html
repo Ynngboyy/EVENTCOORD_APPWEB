@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/estilo.css">
-    <title>EventSync</title>
-</head>
-<body>
-    <header>
-        <div class="logo">
-EventSync        </div>
-        <div class="icon-cart">
-            <img src="img/logo.jpg">
-        </div>
-    </header>
-    <div>
-    <main>
-        <!-- <div class="title">
-            <h3>Eventos</h3>
-            <img src="imagenes/cargandogif (800×600).gif"> 
-        </div> -->
-
-  <div class="carrusel">
-    <div class="carrusel-track">
-        <img src="imagenes/logo.png" alt="">
-        <img src="imagenes/logos.png" alt="">
-        <img src="imagenes/boda.jpg" alt="">
-                <img src="imagenes/evento.jpg" alt="">
-        <img src="imagenes/fiesta.jpg" alt="">
-        <img src="imagenes/xv.jpg" alt="">
-        <img src="imagenes/boda2.jpg" alt="">
-        <img src="imagenes/evento2.jpg" alt="">
-                <img src="imagenes/fiesta2.jpg" alt="">
-        <img src="imagenes/xv2.jpg" alt="">
-        
-
-
-    </div>
-</div>
-<br>
-<br>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/estilo.css">
+        <title>EventSync</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                EventSync        
+            </div>
+            <div class="icon-cart">
+                <img src="assets/img/logo.jpg">
+            </div>
+        </header>
+        <div>
+        <main>
+            <!-- <div class="title">
+                <h3>Eventos</h3>
+                <img src="imagenes/cargandogif (800×600).gif"> 
+            </div> -->
+            <div class="carrusel">
+                <div class="carrusel-track">
+                    <img src="assets/img/logo.png" alt="">
+                    <img src="assets/img/logos.png" alt="">
+                    <img src="assets/img/boda.jpg" alt="">
+                    <img src="assets/img/evento.jpg" alt="">
+                    <img src="assets/img/fiesta.jpg" alt="">
+                    <img src="assets/img/xv.jpg" alt="">
+                    <img src="assets/img/boda2.jpg" alt="">
+                    <img src="assets/img/evento2.jpg" alt="">
+                    <img src="assets/img/fiesta2.jpg" alt="">
+                    <img src="assets/img/xv2.jpg" alt="">
+                </div>
+            </div><br><br>
             <!-- Sección de información de la empresa -->
             <div id="inicio" class="info-section">
                 <div class="info-card">
@@ -48,87 +43,56 @@ EventSync        </div>
                     <p>Eventcord es una empresa especializada en eventos familiares con más de 10 años de experiencia. Nos enfocamos en crear experiencias únicas que fortalecen los lazos familiares.</p>
                     <p>Nuestro equipo de profesionales se dedica a hacer de cada reunión familiar un momento especial y memorable.</p>
                 </div>
-
                 <div class="info-card">
                     <h2>Eventos Familiares</h2>
                     <p>Organizamos reuniones familiares, bodas, bautizos, cumpleaños y todo tipo de celebraciones donde la familia es la protagonista.</p>
                     <p>¡Hacemos que cada miembro de la familia, desde los más pequeños hasta los abuelos, disfruten al máximo!</p>
                 </div>
-
                 <div class="info-card">
                     <h2>Nuestras Metas</h2>
                     <p>
-            ° Posicionarnos como una empresa confiable en el sector tecnológico.<br>
-            ° Expandir nuestros servicios a diferentes tipos de eventos.<br>
-            ° Mejorar continuamente nuestra plataforma mediante retroalimentación de los usuarios.<br>
-            ° Ofrecer soluciones accesibles, modernas y fáciles de usar.
+                        ° Posicionarnos como una empresa confiable en el sector tecnológico.<br>
+                        ° Expandir nuestros servicios a diferentes tipos de eventos.<br>
+                        ° Mejorar continuamente nuestra plataforma mediante retroalimentación de los usuarios.<br>
+                        ° Ofrecer soluciones accesibles, modernas y fáciles de usar.
                   </p>
                 </div>
             </div>
-
-
-<p>
-¿Recibiste una invitacion para un proximo evento?
-<br>
-Entra aqui
-<br>
-       <a href="Eventcord.html" class="btn-dorado">EVENTCOORD</a>
-
-       
-
-
-
-
-
-</p>
-
-
-
-
-
-
-<div class="title">
-            <h3>Contactanos</h3>
-        </div>
-
-<div class="networks">
-
-    <i class='bx bxl-instagram-alt bx-lg'>EventSync.com</i>
-    <i class='bx bxl-tiktok bx-lg'>Eventcoord.com</i>
-    <i class='bx bxl-facebook bx-lg'>EventSync.com</i>
-    <i class='bx bxl-youtube bx-lg'>EventSync.com</i>
-</div>
-</main>
-
-<!-- javascript -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-const track = document.querySelector(".carrusel-track");
-const slides = document.querySelectorAll(".carrusel-track img");
-
-let index = 0;
-
-function moverCarrusel() {
-
-    index++;
-
-    if(index >= slides.length){
-        index = 0;
-    }
-
-    track.style.transform = "translateX(-" + (index * 100) + "%)";
-}
-
-setInterval(moverCarrusel, 1000);
-
-});
-</script>
-
-
-
-</body>
+            <p>
+                ¿Recibiste una invitacion para un proximo evento?
+                <br>
+                Entra aqui
+                <br>
+               <a href="Eventcord.html" class="btn-dorado">EVENTCOORD</a>
+            </p>
+            <div class="title">
+                <h3>Contactanos</h3>
+            </div>
+            <div class="networks">
+                <i class='bx bxl-instagram-alt bx-lg'>EventSync.com</i>
+                <i class='bx bxl-tiktok bx-lg'>Eventcoord.com</i>
+                <i class='bx bxl-facebook bx-lg'>EventSync.com</i>
+                <i class='bx bxl-youtube bx-lg'>EventSync.com</i>
+            </div>
+        </main>
+        <!-- javascript -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const track = document.querySelector(".carrusel-track");
+                const slides = document.querySelectorAll(".carrusel-track img");
+                let index = 0;
+                function moverCarrusel() {
+                    index++;
+                    if(index >= slides.length){
+                        index = 0;
+                    }
+                    track.style.transform = "translateX(-" + (index * 100) + "%)";
+                }
+                setInterval(moverCarrusel, 1000);
+            });
+        </script>
+    </body>
 </html>
